@@ -73,6 +73,7 @@ fn main() {
 
     for element in a {
         println!("the value is: {element}");
+        
     }
 
 }

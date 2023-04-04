@@ -19,6 +19,15 @@ fn main() {
 
     let r3 = &mut s;
     println!("{}", r3);
+
+    let s = String::from("hellod");
+
+    let len = s.len();
+
+    let slice = &s[0..len];
+    let _slice = &s[..len];
+
+    println!("{}", slice);
     
 }
 
@@ -26,9 +35,9 @@ fn calculate_length(s: &String) -> usize { // s is a reference to a String
     s.len()
 }
 
-fn dangle() -> &String { // dangle returns a reference to a String
+// fn dangle() -> &String { // dangle returns a reference to a String
 
-    let s = String::from("hello"); // s is a new String
+//     let s = String::from("hello"); // s is a new String
 
-    &s // we return a reference to the String, s
-}
+//     &s // we return a reference to the String, s
+// }

@@ -11,7 +11,7 @@ impl Rectangle {
     }
 
 }
-
+// Impl block is where we define functions associated with the struct
 impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height

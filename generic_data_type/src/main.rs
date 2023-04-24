@@ -45,11 +45,11 @@ impl<M> View<M> {
 
 //An impl block that only applies to a struct with a particular concrete type for the generic type parameter T
 
-// impl Grid<f32> {
-//     fn distance_from_origin(&self) -> f64 {
-//         (self.x.pow(2) + self.y.pow(2)) as f64).sqrt()
-//     }
-// }
+impl Grid<f32> {
+    fn distance_from_origin(&self) -> f64 {
+        (self.x.pow(2) + self.y.pow(2)) as f64).sqrt()
+    }
+}
 
 //Method that uses generic types different from its struct’s definition
 
@@ -78,9 +78,9 @@ fn main() {
 
     let m = View { x: 5, y: 10 };
 
-    // let integer = Point { x: 5, y: 10 };
-    // let float = Point { x: 1.0, y: 4.0 };
-    // let integer_and_float = Point { x: 5, y: 4.0 };
+    let integer = Point { x: 5, y: 10 };
+    let float = Point { x: 1.0, y: 4.0 };
+    let integer_and_float = Point { x: 5, y: 4.0 };
 
     let number_list = vec![34, 50, 25, 100, 65];
 

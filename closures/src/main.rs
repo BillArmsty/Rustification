@@ -8,6 +8,11 @@ enum ShirtColor {
 struct Inventory {
     shirts: Vec<ShirtColor>,
 }
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
 impl Inventory {
     fn giveaway(&self, user_preference: Option<ShirtColor>) -> ShirtColor {
@@ -49,18 +54,18 @@ fn main() {
     println!("The user with preference {:?} gets {:?}", user_pref2, giveaway2);
     //Adding optional type annotations of the parameter and return value types in the closure
 
-    // let expensive_closure = |num: u32| -> u32 {
-    //     println!("calculating slowly...");
-    //     thread::sleep(Duration::from_secs(2));
-    //     num
-    // }
+    let expensive_closure = |num: u32| -> u32 {
+        println!("calculating slowly...");
+        thread::sleep(Duration::from_secs(2));
+        num
+    };
 
     // //Attempting to call a closure whose types are inferred with two different types
 
-    // let example_closure = |x| x;
+    let example_closure = |x| x;
 
-    // let s = example_closure(String::from("hello"));
-    // let n = example_closure(5);
+    let s = example_closure(String::from("hello"));
+    let n = example_closure(5);
 
     //  Defining and calling a closure that captures an immutable reference
 
@@ -91,4 +96,25 @@ fn main() {
         ::spawn(move || println!("From closure: {:?}", liist))
         .join()
         .unwrap();
+    Using;
+    sort_by_key;
+    to;
+    order;
+    rectangles;
+    by;
+    width;
+    let mut lisst = [
+        Rectangle { width: 10, height: 1 },
+        Rectangle { width: 3, height: 5 },
+        Rectangle { width: 7, height: 12 },
+    ];
+
+    //Using an FnMut closure with sort_by_key
+
+    let mut num_sort_operations = 0;
+    lisst.sort_by_key(|r| {
+        num_sort_operations += 1;
+        r.width
+    });
+    println!("{:#?}, sorted in {num_sort_opertions} operations", lisst)
 }

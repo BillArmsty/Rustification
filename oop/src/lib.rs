@@ -47,6 +47,9 @@ impl Post {
 trait State {
     fn request_review(self: Box<Self>) -> Box<dyn State>;
     fn approve(self: Box<Self>) -> Box<dyn State>;
+    fn content<'a>(&self, post: &'a Post) -> &'a str {
+        ""
+    }
 }
 
 struct Draft {}
@@ -88,5 +91,10 @@ impl State for Published {
     //The approve method on Published will return itself.
     fn approve(self: Box<Self>) -> Box<dyn State> {
         self
+    }
+
+    fn content<'a>(&self, post: &'a Post) -> &'a str {
+        //The content method on Published will return the content of the post.
+        &post.content
     }
 }

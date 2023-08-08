@@ -11,11 +11,26 @@ impl Post {
             content: String::new(),
         }
     }
+
+    pub fn add_text(&mut self, text: &str) {
+        //The add_text method takes a mutable reference to self so we can change the Post instance that we’ve called add_text on.
+        self.content.push_str(text);
+    }
+
+    //Implementing the add_text method to add text to a post’s content
+    pub fn content(&self) -> &str {
+        //The content method takes an immutable reference to self because we only want to read the Post instance, not write to it.
+        //It also returns a reference to content data, not owned data, because we don’t want to take ownership of the content data from Post instance.
+        self.state.as_ref().unwrap().content(self)
+    }
+
+    //Adding a placeholder implementation for the content method on Post that always returns an empty string slice
+    pub fn content(&self) -> &str {
+        ""
+    }
 }
 
-trait State {
-    
-}
+trait State {}
 
 struct Draft {}
 impl State for Draft {}

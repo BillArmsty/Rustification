@@ -32,14 +32,21 @@ impl Post {
     //Request review method
     pub fn request_review(&mut self) {
         if let Some(s) = self.state.take() {
-            //The take method will take the Some value out of the state field and leave a None in its place.
             self.state = Some(s.request_review());
+        }
+    }
+
+    //Approve method
+    pub fn approve(&mut self) {
+        if let Some(s) = self.state.take() {
+            self.state = Some(s.approve());
         }
     }
 }
 
 trait State {
     fn request_review(self: Box<Self>) -> Box<dyn State>;
+    fn approve(self: Box<Self>) -> Box<dyn State>;
 }
 
 struct Draft {}
@@ -50,6 +57,10 @@ impl State for Draft {
         Box::new(PendingReview {})
     }
 
+    //The approve method on Draft will return itself.
+    fn approve(self: Box<Self>) -> Box<dyn State> {
+        self
+    }
 }
 
 struct PendingReview {}
@@ -57,6 +68,25 @@ struct PendingReview {}
 impl State for PendingReview {
     //The request_review method on PendingReview will return itself in this case, because this is the state where we want the post to stay in.
     fn request_review(self: Box<Self>) -> Box<dyn State> {
+        self
+    }
+
+    //The approve method on PendingReview will return a new Published instance.
+    fn approve(self: Box<Self>) -> Box<dyn State> {
+        Box::new(Published {})
+    }
+}
+
+struct Published {}
+
+impl State for Published {
+    //The request_review method on Published will return itself in this case, because this is the state where we want the post to stay in.
+    fn request_review(self: Box<Self>) -> Box<dyn State> {
+        self
+    }
+
+    //The approve method on Published will return itself.
+    fn approve(self: Box<Self>) -> Box<dyn State> {
         self
     }
 }

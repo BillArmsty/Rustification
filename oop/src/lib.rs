@@ -13,7 +13,9 @@ impl Post {
     }
 }
 
-trait State {}
+trait State {
+    
+}
 
 struct Draft {}
 impl State for Draft {}

@@ -28,9 +28,35 @@ impl Post {
     pub fn content(&self) -> &str {
         ""
     }
+
+    //Request review method
+    pub fn request_review(&mut self) {
+        if let Some(s) = self.state.take() {
+            //The take method will take the Some value out of the state field and leave a None in its place.
+            self.state = Some(s.request_review());
+        }
+    }
 }
 
-trait State {}
+trait State {
+    fn request_review(self: Box<Self>) -> Box<dyn State>;
+}
 
 struct Draft {}
-impl State for Draft {}
+
+impl State for Draft {
+    //The request_review method on Draft will return a new PendingReview instance.
+    fn request_review(self: Box<Self>) -> Box<dyn State> {
+        Box::new(PendingReview {})
+    }
+
+}
+
+struct PendingReview {}
+
+impl State for PendingReview {
+    //The request_review method on PendingReview will return itself in this case, because this is the state where we want the post to stay in.
+    fn request_review(self: Box<Self>) -> Box<dyn State> {
+        self
+    }
+}

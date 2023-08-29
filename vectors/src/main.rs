@@ -20,8 +20,8 @@ fn main() {
     //Reading elements of vectors
     //Using indexing syntax or the get method to access an item in a vector
 
-    let v = vec![1,2,3,4,5];
-     
+    let v = vec![1, 2, 3, 4, 5];
+
     //Using & and [] gives us a reference to the element at the index value.
     let third: &i32 = &v[2];
     println!("The third element is {third}");
@@ -29,12 +29,11 @@ fn main() {
     let third: Option<&i32> = v.get(2);
     match third {
         Some(third) => println!("The third element is {}", third),
-        None => println!("There is no third element.")
+        None => println!("There is no third element."),
     }
 
-
     //Iterating over the values in a vector using a for loop
-    let  m = vec![100, 32, 57];
+    let m = vec![100, 32, 57];
     for i in &m {
         println!("{}", i);
     }
@@ -42,7 +41,7 @@ fn main() {
     //Iterating over mutable references to elements in a vector
     let mut n = vec![99, 35, 63];
     for i in &mut n {
-        //To change the value that the mutable reference refers to, 
+        //To change the value that the mutable reference refers to,
         //We have to use the * dereference operator to get to the value in i before we can use the += operator
         *i += 50;
         println!("{}", i);
@@ -56,11 +55,24 @@ fn main() {
         Text(String),
     }
 
-    let row = vec! [
+    let row = vec![
         SpreadsheetCell::Int(3),
         SpreadsheetCell::Text(String::from("blue")),
-        SpreadsheetCell::Float(10.12),
-    ]
+        SpreadsheetCell::Float(10.12)
+    ];
 
+    //Sort a vector of integers
+    let mut vec = vec![1, 5, 10, 2, 15];
+    vec.sort();
+    assert_eq!(vec, vec![1, 2, 5, 10, 15]);
+    println!("{:?}", vec);
 
+    //Sort a vector of Floats
+    let mut vecc = vec![1.1, 1.15, 5.5, 1.123, 2.0];
+
+    vecc.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    assert_eq!(vecc, vec![1.1, 1.15, 5.5, 1.123, 2.0]);
+    println!("{:?}", vecc);
+
+    //Sort a vector of Structs
 }

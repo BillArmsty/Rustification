@@ -1,0 +1,11 @@
+/home/bill/Coding Projects/Rustification/clap/target/debug/deps/anstyle_parse-feeb2f8dda15f2d2.rmeta: /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/lib.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/params.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/mod.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/definitions.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/table.rs
+
+/home/bill/Coding Projects/Rustification/clap/target/debug/deps/libanstyle_parse-feeb2f8dda15f2d2.rlib: /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/lib.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/params.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/mod.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/definitions.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/table.rs
+
+/home/bill/Coding Projects/Rustification/clap/target/debug/deps/anstyle_parse-feeb2f8dda15f2d2.d: /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/lib.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/params.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/mod.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/definitions.rs /home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/table.rs
+
+/home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/lib.rs:
+/home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/params.rs:
+/home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/mod.rs:
+/home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/definitions.rs:
+/home/bill/.cargo/registry/src/github.com-1ecc6299db9ec823/anstyle-parse-0.2.1/src/state/table.rs:

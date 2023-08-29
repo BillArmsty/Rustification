@@ -1,1 +1,1 @@
-/home/armsty/Coding\ Projects/hello_cargo/vectors/target/debug/vectors: /home/armsty/Coding\ Projects/hello_cargo/vectors/src/main.rs
+/home/bill/Coding\ Projects/Rustification/vectors/target/debug/vectors: /home/bill/Coding\ Projects/Rustification/vectors/src/main.rs

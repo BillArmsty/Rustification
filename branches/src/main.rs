@@ -1,7 +1,6 @@
 fn main() {
-   let number = 6;
-   //One must be explicit and always provide if with a Boolean as its condition.
-   
+    let number = 6;
+    //One must be explicit and always provide if with a Boolean as its condition.
 
     if number % 4 == 0 {
         println!("number is divisible by 4");
@@ -11,6 +10,19 @@ fn main() {
         println!("number is divisible by 2");
     } else {
         println!("number is not divisible by 4, 3, or 2");
+    }
+
+    /*
+    We can use match instead of if and else if  statements
+    */
+
+    let num = 5;
+
+    match num {
+        n if n % 4 == 0 => println!("num is divisible by 4"),
+        n if n % 3 == 0 => println!("num is divisible by 3"),
+        n if n % 2 == 0 => println!("num is divisible by 2"),
+        _ => println!("num is not divisible by 4, 3, or 2"),
     }
 
     //Because if is an expression, we can use it on the right side of a let statement to assign the outcome to a variable, as shown here:
@@ -73,8 +85,5 @@ fn main() {
 
     for element in a {
         println!("the value is: {element}");
-        
     }
-
 }
-

@@ -1,9 +1,9 @@
 use std::io;
 
 fn main() {
-    let  x = 5;
+    let x = 5;
     println!("The value of x is: {x}");
-   
+
     let x = x + 1;
 
     //Shadowing of a variable by use of let keyword
@@ -36,7 +36,7 @@ fn main() {
 
     println!("The value at index {index} is: {element}");
 
-    //Variable scope
+    // Variable scope
 
     let mut s = String::from("hello");
 
@@ -56,22 +56,21 @@ fn main() {
     let d = String::from("hello"); // d comes into scope
 
     takes_ownership(d); // d's value moves into the function...
-                        // ... and so is no longer valid here
+    // ... and so is no longer valid here
     let v = 5; // v comes into scope
 
     makes_copy(v); // v would move into the function,
-                   // but i32 is Copy, so it's okay to still
-                   // use v afterward
-
-
- 
+    // but i32 is Copy, so it's okay to still
+    // use v afterward
 }
 
-fn takes_ownership(some_string: String) { // some_string comes into scope
+fn takes_ownership(some_string: String) {
+    // some_string comes into scope
     println!("{}", some_string);
 } // Here, some_string goes out of scope and `drop` is called. The backing
-  // memory is freed.
+// memory is freed.
 
-fn makes_copy(some_integer: i32) { // some_integer comes into scope
+fn makes_copy(some_integer: i32) {
+    // some_integer comes into scope
     println!("{}", some_integer);
 } // Here, some_integer goes out of scope. Nothing special happens.

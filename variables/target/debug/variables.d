@@ -1,1 +1,1 @@
-/home/armsty/Coding\ Projects/hello_cargo/variables/target/debug/variables: /home/armsty/Coding\ Projects/hello_cargo/variables/src/main.rs
+/home/bill/Coding\ Projects/Rustification/variables/target/debug/variables: /home/bill/Coding\ Projects/Rustification/variables/src/main.rs

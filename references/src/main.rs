@@ -28,10 +28,10 @@ fn main() {
     let _slice = &s[..len];
 
     println!("{}", slice);
-    
 }
 
-fn calculate_length(s: &String) -> usize { // s is a reference to a String
+fn calculate_length(s: &String) -> usize {
+    // s is a reference to a String
     s.len()
 }
 

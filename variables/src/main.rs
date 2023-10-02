@@ -62,6 +62,28 @@ fn main() {
     makes_copy(v); // v would move into the function,
     // but i32 is Copy, so it's okay to still
     // use v afterward
+
+    /*
+    Return Values and Scope
+    */
+
+    let v1 = gives_ownership();
+
+    let v2 = String::from("stizo");
+
+    let s3 = takes_and_gives_back(s2);
+}
+
+fn gives_ownership() -> String {
+
+    let some_string = String::from("yours");
+
+    some_string
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+
+    a_string
 }
 
 fn takes_ownership(some_string: String) {

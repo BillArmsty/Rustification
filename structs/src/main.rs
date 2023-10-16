@@ -4,13 +4,12 @@ struct Rectangle {
 }
 
 fn main() {
-
     struct User {
         username: String,
         email: String,
         sign_in_count: u64,
         active: bool,
-    };
+    }
     let mut user1 = User {
         active: true,
         username: String::from("someusername123"),
@@ -20,10 +19,7 @@ fn main() {
 
     user1.email = String::from("anotheremail@example.com");
 
-
     println!("The email of user1 is: {}", user1.email);
-
-    
 
     let user2 = User {
         active: user1.active,
@@ -31,8 +27,8 @@ fn main() {
         email: String::from("another@email.com"),
         sign_in_count: user1.sign_in_count,
     };
-     The above code can be written as follows:
-    
+    //  The above code can be written as follows:
+
     let user2 = User {
         email: String::from("another@email.com"),
         ..user1
@@ -44,18 +40,8 @@ fn main() {
     };
 
     println!("The area of rectangle is: {}", area(&rect2));
-   
-
-  
-} 
+}
 
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
-
-
-    
-   
-
-
-

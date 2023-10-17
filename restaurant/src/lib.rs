@@ -1,8 +1,4 @@
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
+mod front_of_house;
 //Adding use and a path in a scope is similar to creating a symbolic link in the filesystem.
 
 use crate::front_of_house::hosting::add_to_waitlist;
@@ -53,7 +49,7 @@ pub fn eat_at_restaurant() {
     //Relative path  starts from the current module and uses self, super, or an identifier in the current module
     //front_of_house::hosting::add_to_waitlist();
 
-    
+
     //Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
     //Change our mind about what bread we'd like

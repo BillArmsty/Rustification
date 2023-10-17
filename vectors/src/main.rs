@@ -29,7 +29,7 @@ fn main() {
     let third: Option<&i32> = v.get(2);
     match third {
         Some(third) => println!("The third element is {}", third),
-        None => println!("There is no third element."),
+        _ => println!("There is no third element."),
     }
 
     //Iterating over the values in a vector using a for loop

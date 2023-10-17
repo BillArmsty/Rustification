@@ -3,8 +3,17 @@ fn main() {
 }
 
 enum IpAddrKind {
-    V4,
-    V6,
+    // Enums allow you to define a type by enumerating its possible variants.
+    V4(String),
+    V6(String),
+}
+
+struct Ipv4Addr {
+
+}
+
+struct Ipv6Addr {
+
 }
 
 let four = IpAddrKind::V4;

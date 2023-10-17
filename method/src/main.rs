@@ -12,6 +12,9 @@ impl Rectangle {
 }
 // Impl block is where we define functions associated with the struct
 impl Rectangle {
+
+    //In impl blocks, you can define functions that are associated with your type, and 
+    //methods are a kind of associated function that let you specify the behavior that instances of your structs have.
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }

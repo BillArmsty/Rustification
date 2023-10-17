@@ -1,0 +1,11 @@
+use std::collections::HashMap;
+
+fn main() {
+
+    //Bring the HashMap type into scope in idiomatic way
+    let mut map = HashMap::new();
+
+    map.insert(1, 2);
+    println!("{:?}", map);
+
+}

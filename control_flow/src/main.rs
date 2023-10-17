@@ -11,7 +11,6 @@ fn main() {
         7 => remove_fancy_hat(),
         _ => (),
     }
-    
 }
 
 fn add_fancy_hat() {
@@ -31,10 +30,10 @@ enum Coin {
 enum UsState {
     Alabama,
     Alaska,
-    
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
+    //match that allows you to compare a value against a series of patterns and then execute code based on which pattern matches
     match coin {
         Coin::Penny => {
             println!("Lucky penny!");
@@ -59,10 +58,9 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
 
 //if let takes a pattern and an expression separated by an equal sign. It works the same way as a match
 
-let config_max = Some(3u8);
-if let Some(max) = config_max {
-    println!("The maximum is configured to be {}", max);
-} else {
-    println!("The maximum is not configured");
-}
-
+// let config_max = Some(3u8);
+// if let Some(max) = config_max {
+//     println!("The maximum is configured to be {}", max);
+// } else {
+//     println!("The maximum is not configured");
+// }

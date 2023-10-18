@@ -19,6 +19,8 @@ fn main() {
                 ErrorKind::NotFound =>
                     match File::create("hello.txt") {
                         Ok(fc) => fc,
+                        //The panic! macro signals that your program is in a state it can’t handle and lets you tell the process to stop 
+                        
                         Err(e) => panic!("Problem creating the file: {:?}", e),
                     }
                 other_error => { panic!("Problem opening the file: {:?}", other_error) }

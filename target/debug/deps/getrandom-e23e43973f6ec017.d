@@ -1,0 +1,11 @@
+/home/bill/Coding Projects/Rustification/target/debug/deps/getrandom-e23e43973f6ec017.rmeta: /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/lib.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error_impls.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util_libc.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/use_file.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/linux_android.rs
+
+/home/bill/Coding Projects/Rustification/target/debug/deps/getrandom-e23e43973f6ec017.d: /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/lib.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error_impls.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util_libc.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/use_file.rs /home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/linux_android.rs
+
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/lib.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/error_impls.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/util_libc.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/use_file.rs:
+/home/bill/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.10/src/linux_android.rs:

@@ -21,8 +21,4 @@ fn main() {
 
     let result = largest(&number_list);
     println!("The largest number is {}", result);
-   
-
-   
-
 }

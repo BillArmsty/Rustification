@@ -22,7 +22,6 @@ fn largest_char(list: &[char]) -> &char {
     }
 
     largest
-
 }
 // A Point<T, U> generic over two types so that x and y can be values of different types
 // struct Point<T> {
@@ -47,7 +46,7 @@ impl<M> View<M> {
 
 impl Grid<f32> {
     fn distance_from_origin(&self) -> f64 {
-        (self.x.pow(2) + self.y.pow(2)) as f64).sqrt()
+        ((self.x.pow(2) + self.y.pow(2)) as f64).sqrt()
     }
 }
 
@@ -67,14 +66,12 @@ impl<X1, Y1> Pointer<X1, Y1> {
     }
 }
 
-
 fn main() {
-
     let p1 = Pointer { x: 5, y: 10.4 };
     let p2 = Pointer { x: "Hello", y: 'c' };
 
     let p3 = p1.mixup(p2);
-    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
+    println!("p3.x = {}, p3.y = { }", p3.x, p3.y);
 
     let m = View { x: 5, y: 10 };
 
@@ -91,5 +88,4 @@ fn main() {
 
     let result = largest_char(&char_list);
     println!("The largest char is {}", result);
-   
 }

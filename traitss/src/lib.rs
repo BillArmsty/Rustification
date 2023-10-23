@@ -18,7 +18,6 @@
 
 // println!("New article available! {}", article.summarize());
 
-
 //Conditionally implementing methods on a generic type depending on trait bounds
 
 use std::fmt::Display;

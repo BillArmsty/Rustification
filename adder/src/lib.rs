@@ -47,7 +47,6 @@ mod tests {
         let larger = Rectangle {
             width: 8,
             height: 7,
-        
         };
         let smaller = Rectangle {
             width: 5,

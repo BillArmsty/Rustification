@@ -3,6 +3,7 @@ use std::fs;
 
 #[cfg(test)]
 mod tests {
+    // super::run();
     use super::*;
 
     #[test]
@@ -16,6 +17,45 @@ Pick three.";
         assert_eq!(vec!["safe, fast, productive."], search(query, contents));
     }
 }
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+
+//     #[test]
+//     fn valid_config() {
+//         let args = vec![
+//             String::from("program_name"),
+//             String::from("input_file.txt"),
+//             String::from("-o"),
+//             String::from("output_file.txt")
+//         ];
+//         let config = Config::new(&args).unwrap();
+//         assert_eq!(config.input_filename, "input_file.txt");
+//         assert_eq!(config.output_filename, "output_file.txt");
+//     }
+
+//     #[test]
+//     fn missing_input_file() {
+//         let args = vec![
+//             String::from("program_name"),
+//             String::from("-o"),
+//             String::from("output_file.txt")
+//         ];
+//         let result = Config::new(&args);
+//         assert!(result.is_err());
+//     }
+
+//     #[test]
+//     fn missing_output_file() {
+//         let args = vec![
+//             String::from("program_name"),
+//             String::from("input_file.txt"),
+//             String::from("-o")
+//         ];
+//         let result = Config::new(&args);
+//         assert!(result.is_err());
+//     }
+// }
 
 pub struct Config {
     pub query: String,
@@ -47,6 +87,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
     let contents = String::from_utf8_lossy(&contents);
+    // let contents = contents.as_str();
     for line in contents.lines() {
         if line.contains(&config.query) {
             println!("{}", line);

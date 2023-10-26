@@ -6,6 +6,7 @@ use std::env;
 fn main() {
     // Read any command line arguments passed to and then collect the values into a vector.
     let args: Vec<String> = env::args().collect();
+   
 
     // Creating variables to hold the query argument and file path argument
     let config = Config::new(&args).unwrap_or_else(|err| {

@@ -1,4 +1,7 @@
 use std::thread;
+use std::time::Duration;
+
+
 #[derive(Debug, PartialEq, Clone, Copy)]
 enum ShirtColor {
     Red,
@@ -65,7 +68,7 @@ fn main() {
     let example_closure = |x| x;
 
     let s = example_closure(String::from("hello"));
-    let n = example_closure(5);
+    let n = example_closure(String::from("world"));
 
     //  Defining and calling a closure that captures an immutable reference
 
@@ -96,13 +99,13 @@ fn main() {
         ::spawn(move || println!("From closure: {:?}", liist))
         .join()
         .unwrap();
-    Using;
-    sort_by_key;
-    to;
-    order;
-    rectangles;
-    by;
-    width;
+    // Using;
+    // sort_by_key;
+    // to;
+    // order;
+    // rectangles;
+    // by;
+    // width;
     let mut lisst = [
         Rectangle { width: 10, height: 1 },
         Rectangle { width: 3, height: 5 },
@@ -116,5 +119,5 @@ fn main() {
         num_sort_operations += 1;
         r.width
     });
-    println!("{:#?}, sorted in {num_sort_opertions} operations", lisst)
+    println!("{:#?}, sorted in {num_sort_operations} operations", lisst)
 }
